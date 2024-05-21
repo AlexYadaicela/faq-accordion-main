@@ -1,0 +1,146 @@
+/* import font-style */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --clr-primary-100: hsl(275, 100%, 97%);
+    --clr-primary-200: hsl(293, 74%, 51%);
+    --clr-primary-300:hsl(292, 42%, 14%); 
+
+    --clr-neutral-100: hsl(0, 0%, 100%); 
+
+    --ff-primary: "Work Sans", sans-serif;; 
+
+    --ff-body: var(--ff-primary);
+
+    --fw-regular: 400; 
+    --fw-bold: 600; 
+    --fw-bolder: 700; 
+}
+
+/* box-sizing rule*/
+*,
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+/* reset default styling */
+*{
+    font: inherit;
+    margin: 0; 
+}
+
+body{
+    line-height: 1.5rem;
+}
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+    display: block;
+}
+
+/* general styling */
+body{
+    margin-block: 10rem; 
+    margin-inline: 1rem; 
+    font-family: var(--ff-body);
+    color: var(--clr-primary-300);  
+    background-image: url('assets/images/background-pattern-mobile.svg');
+    background-color: var(--clr-primary-100);
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 24em){
+    body{
+        background-image: url('assets/images/background-pattern-desktop.svg');
+    }
+}
+
+button{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    border: 0; 
+    
+    width: 100%;
+    
+    text-align: start;
+    font-size: 0.875rem;
+    
+    font-weight: var(--fw-bold);
+    background-color: transparent;
+}
+
+button span{
+    line-height: 1rem;
+}
+
+button span:hover{
+    color: var(--clr-primary-200);
+}
+
+
+button > img{
+    margin-inline-start: 1.3rem;
+    width: 1.5rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* FAQs styling */
+.container{
+    background-color: var(--clr-neutral-100);
+    border-radius: 0.5rem;
+    padding-inline: 1rem;
+    max-width: 30rem;
+    margin-inline: auto;
+}
+
+h1{
+    display: flex;
+    gap: 1rem;  
+    align-items: center;
+    
+    font-size: 1.5rem;
+    font-weight: var(--fw-bolder);
+
+    padding-block-start: 1.5rem; 
+}
+
+h1 > img{
+    width: 1.2rem; 
+}
+
+article{
+    display: grid; 
+    padding-block-end: 1rem;
+}
+
+article section:not(:nth-child(4)){
+    border-bottom: 1px solid rgb(206, 202, 202);
+    padding-block: 1rem;
+}
+
+article section:nth-child(4){
+    padding-block-start: 1rem; 
+}
+
+.panel{
+    display: none;
+    font-size: 0.785rem;
+    padding-block-start: 1.5rem; 
+    padding-inline-start: 0.3rem;
+    font-weight: var(--fw-regular);
+    color: hsl(293, 32%, 40%); 
+}
+
+.panel[aria-expanded="true"]{
+    display: block; 
+}
+
+
+
+
